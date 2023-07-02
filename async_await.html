@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let processoAssincrono = new Promise((resolve, reject) => {
+            setTimeout(() => resolve('Sucesso no processo assíncrono'), 3000)
+        })
+
+        function recuperarDados() {
+            processoAssincrono.then(p => console.log(p))
+
+            console.log('Processamento assíncrono 1')
+
+            fetch()
+        }
+
+        recuperarDados()
+        console.log('Fim')
+    </script>
+</body>
+
+</html>
